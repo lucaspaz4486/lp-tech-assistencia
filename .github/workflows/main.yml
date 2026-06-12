@@ -1,0 +1,22 @@
+name: 🚀 Deploy Automático para InfinityFree
+
+on:
+  push:
+    branches:
+      - main # O robô só roda quando você atualiza a branch main
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Baixando o código mais recente
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sincronizando com o Servidor (FTP)
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: htdocs/
