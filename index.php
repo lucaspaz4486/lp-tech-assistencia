@@ -363,7 +363,7 @@ gap: 15px;
 
 <div class="container">
 
-<h2 class="section-title">Feedback dos nossos <span class="neon-text">Clientes</span></h2>
+<h2 class="section-title">Relatos dos nossos <span class="neon-text">Clientes</span></h2>
 
 
 <div class="swiper testimonialSwiper">
